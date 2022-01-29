@@ -9,20 +9,20 @@ import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj.motorcontrol.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class drivetrain extends SubsystemBase {
+public class Drivetrain extends SubsystemBase {
 
   public static final VictorSP m_frontLeft = new VictorSP(0); //make a constants file later
   public static final VictorSP m_frontRight = new VictorSP(2);
   public static final VictorSP m_backLeft = new VictorSP(1);
   public static final VictorSP m_backRight = new VictorSP(3);
 
-  public static final MotorControllerGroup m_leftMotors = new MotorControllerGroup(m_frontLeft,m_backLeft);
-  public static final MotorControllerGroup m_rightMotors = new MotorControllerGroup(m_frontRight,m_backRight);
+  public static final MotorControllerGroup m_leftMotors = new MotorControllerGroup(m_frontLeft, m_backLeft);
+  public static final MotorControllerGroup m_rightMotors = new MotorControllerGroup(m_frontRight, m_backRight);
 
   public static final DifferentialDrive m_drive = new DifferentialDrive(m_leftMotors, m_rightMotors);
 
   /** Creates a new drivetrain. */
-  public drivetrain() {
+  public Drivetrain() {
     //where we configure stuff
     m_leftMotors.setInverted(false);
     m_rightMotors.setInverted(false);
